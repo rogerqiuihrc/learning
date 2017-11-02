@@ -4,7 +4,20 @@ Ext.onReady(function() {
 	var tbconfig = {
 		renderTo:'toolbar',
 		width:500
-	};   
+	};  
+	
+	var fmenu = new Ext.menu.Menu({
+		shadow:'frame',
+		allowOtherMenus:true,
+		items:[
+			
+			{
+				text:'open',				
+				handler:onButtClick				
+			}		
+		]
+		
+	});
 
 	var tb = new Ext.toolbar.Toolbar(tbconfig);	
 	tb.add([
@@ -40,13 +53,19 @@ Ext.onReady(function() {
 			hideLabel:true,
 			width:150
 		},		
-		'<a href="http://news.sina.com.cn/">sina</a>'
+		'<a href="http://news.sina.com.cn/">sina</a>',
+		{
+			text:'file',menu:fmenu
+		}
+		
 	]);
 	var btn = new Ext.button.Button({
 		text:'toggle',
 		renderTo:'btn',
 		handler: onToogleSave
 	});
+	
+	
 	
 	var enable = true;
 	function onToogleSave(btn)
