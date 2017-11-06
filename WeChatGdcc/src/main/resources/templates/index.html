@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Spring Boot and Spring MVC</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{extjs4.2/resources/css/ext-all.css}" rel="stylesheet" />
+	<script th:src="@{extjs4.2/ext-all.js}" type="text/javascript"></script>
+	<script th:src="@{myjs/ch1.js}" type="text/javascript"></script>
+	
+</head>
+<body>
+    <h3>广东计算技术应用研究所</h3>
+
+    <P th:text="'当前服务器时间是： ' + ${serverTime}"></P>
+    <div id='progressBar'></div>
+</body>
+</html>
